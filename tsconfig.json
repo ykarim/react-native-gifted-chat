@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "./src",
     "strict": true,
     "jsx": "react-native",
     "target": "es6",

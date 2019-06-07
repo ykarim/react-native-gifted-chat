@@ -2,8 +2,8 @@
   "name": "react-native-gifted-chat",
   "version": "0.9.3",
   "description": "The most complete chat UI for React Native",
-  "main": "node_modules/expo/AppEntry.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FaridSafi/react-native-gifted-chat.git"
@@ -26,10 +26,10 @@
   "homepage": "https://github.com/FaridSafi/react-native-gifted-chat#readme",
   "scripts": {
     "config:dev": "json -I -f package.json -e 'this.main=\"node_modules/expo/AppEntry.js\"'",
-    "config:npm": "json -I -f package.json -e 'this.main=\"lib/index.js\"'",
+    "config:npm": "json -I -f package.json -e 'this.main=\"src/index.js\"'",
     "lint": "tslint --project .",
     "tsc": "node_modules/.bin/tsc --noEmit",
-    "build": "rm -rf lib/ && node_modules/.bin/tsc",
+    "build": "node_modules/.bin/tsc",
     "test": "TZ=Europe/Paris jest --no-watchman",
     "test:watch": "TZ=Europe/Paris jest --watch",
     "test:coverage": "TZ=Europe/Paris jest --coverage",
@@ -94,8 +94,9 @@
     "react-native-iphone-x-helper": "^1.2.0",
     "react-native-lightbox": "^0.7.0",
     "react-native-parsed-text": "^0.0.20",
-    "uuid": "3.3.0",
-    "react-native-video": "4.4.1"
+    "react-native-video": "4.4.1",
+    "tslib": "^1.9.3",
+    "uuid": "3.3.0"
   },
   "peerDependencies": {
     "prop-types": "*",
