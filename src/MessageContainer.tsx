@@ -220,6 +220,10 @@ export default class MessageContainer extends React.PureComponent<
     } else {
       this.setState({ showScrollBottom: false })
     }
+
+    if (event.nativeEvent.contentOffset.y > 20) {
+      Keyboard.dismiss();
+    }
   }
 
   renderRow = ({ item, index }: ListRenderItemInfo<IMessage>) => {

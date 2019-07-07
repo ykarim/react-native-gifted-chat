@@ -1,7 +1,7 @@
 import * as tslib_1 from "tslib";
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FlatList, View, StyleSheet, Keyboard, TouchableOpacity, Text, } from 'react-native';
+import { FlatList, View, StyleSheet, Keyboard, TouchableOpacity, Text, Keyboard } from 'react-native';
 import LoadEarlier from './LoadEarlier';
 import Message from './Message';
 import Color from './Color';
@@ -91,6 +91,10 @@ export default class MessageContainer extends React.PureComponent {
             }
             else {
                 this.setState({ showScrollBottom: false });
+            }
+
+            if (event.nativeEvent.contentOffset.y > 20) {
+                Keyboard.dismiss();
             }
         };
         this.renderRow = ({ item, index }) => {
